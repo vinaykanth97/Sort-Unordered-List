@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sort</title>
+</head>
+
+<body>
+    <!-- <button>Click Here</button> -->
+    <ul>
+        <li>d</li>
+        <li>b</li>
+        <li>a</li>
+        <li>c</li>
+        <li>e</li>
+        <li>f</li>
+        <li>e</li>
+        <li>apple</li>
+        <li>elephant</li>
+        <li>vinay</li>
+        <li>Xerox</li>
+    </ul>
+    <script>
+        let letters = document.querySelectorAll('li')
+        let emptArray = []
+        letters.forEach(letter => {
+            emptArray.push(letter.innerHTML.toLocaleLowerCase())
+        })
+        let html = ""
+        emptArray.sort().forEach(l => {
+            html += `<li>${l}</li>`
+        })
+        document.querySelector('ul').innerHTML = html
+    </script>
+</body>
+
+</html>
